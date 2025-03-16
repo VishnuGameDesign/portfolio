@@ -29,7 +29,7 @@ h2 {
 	font-size: 31px;
 }
 pre {
-	background-color: e4e4e4;
+	background-color: #ea766a;
 	border-radius: 10px;
 }
 
@@ -42,7 +42,7 @@ pre {
     font-family: 'Roboto Bold', sans-serif;
     font-size: 21px;
     font-weight: 1020;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 .orange {
@@ -269,7 +269,7 @@ pre {
 			display: block;
 			border-bottom: 0;
 			color: inherit;
-			font-weight: 900;
+			font-weight: 1020;
 			letter-spacing: 0.35em;
 			margin: 0 0 2.5em 0;
 			text-decoration: none;
