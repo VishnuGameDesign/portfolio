@@ -105,24 +105,53 @@ pre {
     margin-right: 7px;
 }
 .contact {
-	background-color: #f8f8f8;
-	padding: 5em 0em;
+	background-color: lightgray;
+	padding: 5em 0;
 }
+
+.contact .container {
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.contact .row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.contact .col-md-6 {  
+	color: black;
+	text-align: center;
+	padding: 20px;
+}
+
 .contact h1 {
 	padding-bottom: 30px;
-    font-size: 25px;
-    letter-spacing: 5px;
-    margin-top: 0px;
+	font-size: 36px;
+	letter-spacing: 5px;
+	margin-top: 0;
 }
 
 .contact p {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: black;
+	line-height: 1.6; 
 }
 
 .contact p.contact-desc {
-    margin-bottom: 25px;
-    line-height: 27px;
+	font-size: 24px;
+	margin-bottom: 25px;
+	line-height: 27px;
 }
+
+.contact p strong {
+	font-weight: bold;
+}
+
 
 .social-contact-icon {
 	background-color: #f2f3f4;
@@ -193,8 +222,6 @@ pre {
 		.footer {
 			padding: 30px 0px;
 		}
-		
-		
 
 		.icon.style2 {
 			-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -291,20 +318,6 @@ pre {
     margin-top: 30px;
 }
 
-.btn-tobais {
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-ms-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-	border-radius: 25px;
-	font-size: 12px;
-	color: #333;
-    background-color: #ffffff;
-    margin-top: 30px;
-    border: 1px solid;
-    padding: 10px 20px;
-}
 .hover-off:hover{
 	color: #fff;
 }
@@ -380,7 +393,7 @@ img.img-responsive {
     margin-top: 30px;
 }
 
-.btn-defalt {
+.btn-default {
 
 	background-color: #333;
 	color: #fff;
@@ -735,7 +748,7 @@ button[disabled], html input[disabled] {
 	max-height: 80vh;
 	overflow-y: auto;
 	padding: 20px;
-	background-color: #fff;
+	background-color: lightgray;
 	border-radius: 10px; 
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
@@ -766,16 +779,31 @@ button[disabled], html input[disabled] {
 	opacity: 1;
 }
 .a a .img-hover {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    right: 15px;
-    bottom: 15px;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    transition: all .5s ease-in-out;
-    opacity: 0.8;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	transition: all .5s ease-in-out;
+	opacity: 1;  /* Opacity for the background overlay */
+	background-color: rgba(0, 0, 0, 0.5);  /* Optional: add background color for contrast */
+}
+
+.a a:hover .img-hover {
+	opacity: 1;  /* Increase opacity for background on hover */
+}
+
+.a a .img-hover .c-table {
+	position: relative;  /* Make sure the text is not affected by opacity */
+	z-index: 2;  /* Ensures the text stays above the background overlay */
+}
+
+.a a .img-title, .a a h4 {
+	position: relative;
+	font-size: 2em;
 }
 
 @media screen and (max-width: 768px) {
@@ -788,30 +816,7 @@ button[disabled], html input[disabled] {
 .a a:hover .img-hover {
 	opacity: 0;
 }
-.a a .img-hover.glass {
-    background: #ea766a;
-}
-.a a .img-hover.shoes-glass {
-    background: #a0c4a3;
-}
-.a a .img-hover.hand-parts {
-    background: #da9dd9;
-}
-.a a .img-hover.table-with-phone {
-    background: #6da178;
-}
-.a a .img-hover.orange-shoe {
-    background: #da9567;
-}
-.a a .img-hover.glass-shoes {
-    background: #5dc6aa;
-}
-.a a .img-hover.girls-tops {
-    background: #cab0a6;
-}
-.a a .img-hover.egg-arts {
-    background: #ddd173;
-}
+
 .a a .img-hover .c-table {
 	display: table;
 	width: 100%;
