@@ -4,7 +4,7 @@
 body {
 	font-family: 'Arial', sans-serif;
 	font-size: 16px;
-	background: #ffffff;
+	background: #000;
 }
 
 a:hover {
@@ -12,13 +12,27 @@ a:hover {
 }
 
 .logo .name {
-	font-size: 36px; 
-	font-weight: bold;
+	color: white;
+	font-size: 40px; 
+	font-weight: bolder;
 }
 
 .logo .job-title {
-	font-size: 18px; 
-	color: #666; 
+	font-size: 24px;
+	color: white;
+	font-weight: normal;
+	letter-spacing: 2px; 
+}
+
+.link-container {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.popup-paragraph, .popup-head, .link-container {
+	display: flex;
+	align-items: center;
 }
 
 .col-md-9 {
@@ -40,6 +54,13 @@ a:hover {
 	cursor: pointer;
 }
 
+.inner {
+	display: flex;
+	justify-content: space-between; 
+	align-items: inherit;
+}
+
+
 .btn .fa-download {
 	margin-right: 8px;
 	font-size: 18px;
@@ -56,12 +77,14 @@ blockquote {
 h1, h2, h3, h5, h6{
 	font-family: 'Arial', sans-serif;
 	font-weight: bold;
+	color: #CCCCCC;
 }
 
 h4{
  	font-family: 'Arial', sans-serif;
 	font-weight: normal;
 	text-transform: none;
+	color: #CCCCCC;
 }
 textarea {
 	resize: none;
@@ -73,10 +96,6 @@ h1 {
 h2 {
 	font-size: 31px;
 }
-pre {
-	background-color: #ea766a;
-	border-radius: 10px;
-}
 
 .inner {
     border-bottom: 1px solid #f2f2f2;
@@ -85,13 +104,10 @@ pre {
 .description {
 	padding-top: 2.3em;
     font-family: 'Arial', sans-serif;
+	color: #CCCCCC;
     font-size: 21px;
     font-weight: 1020;
     letter-spacing: 1px;
-}
-
-.orange {
-	color: #eb7f36;
 }
 
 .checkbox-inline, .radio-inline {
@@ -104,8 +120,9 @@ pre {
     font-size: 25px;
     margin-right: 7px;
 }
+
 .contact {
-	background-color: lightgray;
+	background-color: #101010;
 	padding: 5em 0;
 }
 
@@ -123,7 +140,7 @@ pre {
 }
 
 .contact .col-md-6 {  
-	color: black;
+	color: white;
 	text-align: center;
 	padding: 20px;
 }
@@ -138,7 +155,7 @@ pre {
 .contact p {
 	margin-bottom: 15px;
 	font-size: 24px;
-	color: black;
+	color: #CCCCCC;
 	line-height: 1.6; 
 }
 
@@ -768,7 +785,7 @@ button[disabled], html input[disabled] {
 }
 
 .a a img.img-responsive {
-	opacity: 0.5;
+	opacity: 1;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
@@ -853,7 +870,7 @@ button[disabled], html input[disabled] {
     margin-bottom: 35px;
     margin-left: 15px;
 }
-.popup-parapraph {
+.popup-paragraph {
 	padding: 0px 15px;
 }
 .pop-up-icon {
