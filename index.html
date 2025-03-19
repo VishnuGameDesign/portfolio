@@ -86,8 +86,19 @@
 													<h2 class="popup-head">TRAIN WRECK</h2>
 												</div>
 												<div>
-													<p class="popup-paragraph">Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit a amet nisi is a euismod sed cursus arcu elementum and ipsum arcu vivamus is quis venenatis orci and nullam dolore. Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod still amet nisi aliqua.Eas Lorem ipsum dolor sit amet.</p>
+													<p class="popup-paragraph">Train Wreck is a 3D Top-Down Isometric, Local Co-Op, Base-Defense game, where players take the role of train operators delivering cargo across multiple stations while fending off relentless train robbers set in the desert environment of a Steamwest world. Players must maintain, defend, and repair the train. Each delivery route is filled with danger, and players achieve victory by successfully delivering cargos to all stations.
+													</p>
 												</div>
+												<h3 class="popup-head">My Contributions:</h3>
+												<p class="popup-head">
+													- Programmed a player state machine using the HSM architecture<br>
+													- Planned and implemented scriptable object architecture throughout the whole project<br>
+													- Wrote a custom Game Manger that handles custom level based data<br>
+													- Created custom shaders to enhance and improve feedback<br>
+													- Created 10+ unique visual effects including all players states<br>
+													- Implemented audio using FMOD, designing 30+ adaptive events that react to player behaviour and in game states<br>
+													- Iterated and optimized system and performance based on play testing and QA analysis 
+												</p>
 											</div>
 										</div>
 									</div>
@@ -170,14 +181,18 @@
 									<div class="row">
 										<div class="pop-up-color">
 											<div class="col-md-8 p-l-0 p-r-0">
-												<img src="images/6.jpg" class="img-responsive" alt="Responsive image">
+												<video class="img-responsive" controls>
+													<source src="videos/vertexdisplacement/vertex_displacement_shader.mp4"></video>
 											</div>
 											<div class="col-md-4">
 												<div>
-													<h2 class="popup-head">Glass & Shoes</h2>
+													<h2 class="popup-head">Vertex Displacement</h2>
 												</div>
 												<div>
-													<p class="popup-paragraph">Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit a amet nisi is a euismod sed cursus arcu elementum and ipsum arcu vivamus is quis venenatis orci and nullam dolore. Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod still amet nisi aliqua.Eas Lorem ipsum dolor sit amet.</p>
+													<p class="popup-paragraph"> Vertex displacement shader that creates a cartoony bulge effect - mimicking steam pressure building inside the pipe. This effect combines mesh vertex manipulation in Shader Graph with dynamic position data controlled through code.
+														A unique challenge was handling our modular 3D models, as the effect needed to work seamlessly across multiple pieces. To solve this, I convert the position from world space to object space and use a spline inside the pipes to track the bulge location. The effect remains consistent even with different pipe segments by passing the bulge's position through code.
+														The shader’s values, including bulge speed, are exposed and fully tunable through code.
+													</p>
 												</div>
 											</div>
 										</div>
@@ -207,10 +222,18 @@
 											</div>
 											<div class="col-md-4">
 												<div>
-													<h2 class="popup-head">Girls Tops</h2>
+													<h2 class="popup-head">Object Oriented State Pattern</h2>
 												</div>
 												<div>
-													<p class="popup-paragraph">Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit a amet nisi is a euismod sed cursus arcu elementum and ipsum arcu vivamus is quis venenatis orci and nullam dolore. Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod still amet nisi aliqua.Eas Lorem ipsum dolor sit amet.</p>
+													<p class="popup-paragraph">Designed and implemented an Object-Oriented State Machine to manage complex player behaviors efficiently.
+													</p>
+													<p class="popup-head">
+														- State Management: Built a modular system using individual state classes to encapsulate player actions. <br>
+														- Input Handling: Centralized input logic using a MonoBehaviour controller to delegate actions based on the active state. <br>
+														- State Factory: Implemented a PlayerStateFactory to dynamically create and switch between states, ensuring clean transitions and improved scalability. <br>
+														- Fire and Stunned Mechanic: Restricted player interactions while on fire allowing extinguisher pickups, restoring full abilities once extinguished.<br>
+														- Extensibility: The system supports easy addition of new states without modifying existing code, promoting future feature expansion.<br>
+													</p>
 												</div>
 											</div>
 										</div>
