@@ -27,6 +27,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
   <!-- =======================================================
   * Template Name: Blogy
   * Template URL: https://bootstrapmade.com/blogy-bootstrap-blog-template/
@@ -99,23 +102,30 @@
     
     <!-- System Showcase -->
     <section class="bg-white text-black px-8 py-12 font-sans">
-        <div>
-          <h3 class="text-3xl font-semibold mb-4">System Showcase</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-            <div>
-              <img src="player-states-thumb.jpg" class="rounded-lg mb-2 shadow" alt="Player States">
-              <p class="text-center">Train Wreck - Player States</p>
-            </div>
-            <div>
-              <img src="vertex-displacement-thumb.jpg" class="rounded-lg mb-2 shadow" alt="Vertex Displacement">
-              <p class="text-center">Train Wreck - Vertex Displacement</p>
-            </div>
-            <div>
-              <img src="visual-effects-thumb.jpg" class="rounded-lg mb-2 shadow" alt="Visual Effects">
-              <p class="text-center">Train Wreck - Visual Effects</p>
-            </div>
+      <div>
+        <h3 class="text-3xl font-semibold mb-4">System Showcase</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+
+          <!-- First video (YouTube Embed) -->
+          <div class="relative group">
+            <h4 class="text-2xl font-semibold mb-4">Object-Oriented State Machine</h4>
+            <iframe id="video1" class="rounded-lg object-cover w-full h-64" src="https://www.youtube.com/embed/lzhaSxdf-FQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+
+          <!-- Second video (YouTube Embed) -->
+          <div class="relative group">
+            <h4 class="text-2xl font-semibold mb-4">Vertex Displacement</h4>
+            <iframe id="video2" class="rounded-lg object-cover w-full h-64" src="https://www.youtube.com/embed/zuj7Bhc2An4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <!-- Third video (YouTube Embed) -->
+          <div class="relative group">
+            <h4 class="text-2xl font-semibold mb-4">Visual Effects</h4>
+            <iframe id="video3" class="rounded-lg object-cover w-full h-64" src="https://www.youtube.com/embed/UBfEB0bnM_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
         </div>
+      </div>
 
         <!-- Scriptable Object Architecture -->
         <div>
@@ -134,9 +144,12 @@
 
             <!-- Inspector Screenshot / Code Snippet -->
             <div>
-              <img src="scriptable-object-example.png" class="rounded-lg shadow-lg" alt="Scriptable Object Screenshot">
+              <h3 class="text-2xl font-semibold mb-4">Scriptable Object Data Implementation Example for Player's Movement</h3>
+              <div class="flex flex-col space-y-4">
+                <img src="assets/images/player_img1.jpg" class="rounded-lg shadow-lg w-full" alt="Scriptable Object Screenshot">
+                <img src="assets/images/player_img2.png" class="rounded-lg shadow-lg w-full object-contain max-h-[400px]" alt="Scriptable Object Screenshot">
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
