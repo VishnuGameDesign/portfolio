@@ -14,9 +14,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-color: #333333;
+  --background-color: #ffffff;
+  --default-font: "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -47,7 +47,7 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #00000;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -65,7 +65,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -86,7 +86,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* PHP Email Form Messages
@@ -159,10 +159,9 @@ h6 {
   width: 120px;
   height: 120px;
   animation-delay: 0s;
-  animation: pulsate-play-btn 2s;
-  animation-direction: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps;
+  animation: pulsate-play-btn 2s infinite ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
   opacity: 1;
   border-radius: 50%;
   border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
@@ -246,7 +245,7 @@ h6 {
   font-size: 32px;
   font-weight: 400;
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
 
@@ -365,7 +364,7 @@ h6 {
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 16px;
-    font-family: var(--nav-font);
+    font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -492,7 +491,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
-    font-family: var(--nav-font);
+    font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-weight: 500;
     display: flex;
@@ -617,7 +616,7 @@ h6 {
 
 .footer .footer-about .logo span {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -625,7 +624,7 @@ h6 {
 
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .footer .social-links {
@@ -787,7 +786,7 @@ h6 {
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+    animation-delay: 0s !important;
   }
 }
 
@@ -929,7 +928,7 @@ section,
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -1054,7 +1053,7 @@ section,
 
 .blog-hero .blog-item .post-meta .date::before,
 .blog-hero .blog-item .post-meta .category::before {
-  font-family: "bootstrap-icons";
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-right: 0.5rem;
   font-size: 1rem;
 }
@@ -1069,7 +1068,7 @@ section,
 
 .blog-hero .blog-item .post-title {
   margin: 0;
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .blog-hero .blog-item .post-title a {
@@ -2350,7 +2349,7 @@ section,
   font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin-top: 0.5rem;
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .blog-author .author-content .author-bio {
@@ -2409,7 +2408,7 @@ section,
   color: var(--heading-color);
   font-size: 32px;
   font-weight: 700;
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -3364,7 +3363,7 @@ section,
   font-size: clamp(6rem, 15vw, 12rem);
   font-weight: 800;
   color: color-mix(in srgb, var(--heading-color), transparent 10%);
-  font-family: var(--heading-font);
+  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1;
 }
 

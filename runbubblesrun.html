@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - Vishnu Suresh</title>
+  <title>Portfolio - Run Bubbles Run!</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,6 +27,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
   <!-- =======================================================
   * Template Name: Blogy
   * Template URL: https://bootstrapmade.com/blogy-bootstrap-blog-template/
@@ -36,18 +39,16 @@
   ======================================================== -->
 </head>
 
-<body class="contact-page">
-
+<body class="index-page">
   <header id="header" class="header position-relative">
     <div class="container-fluid container-xl position-relative">
 
       <div class="top-row d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-end">
+        <a href="portfolio.html" class="logo d-flex align-items-end">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.webp" alt=""> -->
           <h1 class="sitename">Vishnu Suresh</h1>
         </a>
-
         <div class="d-flex align-items-center">
           <div class="social-links">
             <a href="https://github.com/VishnuGameDesign" target="_blank" rel="noopener noreferrer">
@@ -56,6 +57,7 @@
             <a href="https://www.linkedin.com/in/vishnu-suresh-5ab471267/" target="_blank" rel="noopener noreferrer">
               <i class="bi bi-linkedin"></i>
             </a>
+          </div>
         </div>
       </div>
 
@@ -65,68 +67,82 @@
       <div class="container d-flex justify-content-center position-relative">
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
             <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-        </div>
       </div>
     </div>
+
   </header>
 
-  <main class="main">
+    <main class="main max-w-screen-xl mx-auto px-10">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="title-wrapper">
+      <h1 class="text-4xl font-bold mb-4">Run Bubbles Run!</h1>
+      <p>
+        Run Bubbles Run is a 3rd person, 2-player local PvP game where players control uniquely identifiable bubbles, distinguished by their underwear. The goal is to race along a beach-themed obstacle course while avoiding hazards like seashells, starfish, and swinging shovels hidden inside sandcastles. These obstacles can pop your bubble, setting you back on the track. Skillfully jump over or navigate around them to stay ahead. The first bubble to cross the finish line wins the race!
+      </p>
+      <p><br>
+        Check out the project here:
+        <a href="https://vishnu-suresh.itch.io/run-bubbles-run" target="_blank" class="text-blue-600 underline hover:text-blue-800">
+          Run Bubbles Run! on itch.io
+        </a>
+      </p>
+    </div>
 
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="title-wrapper">
-        <h1>Contact</h1>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    
+    <!-- Blog Hero Section -->
+    <div class="blog-grid">
+    
+    <section id="blog-hero" class="blog-hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 mb-3">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-card">
-              <div class="icon-box">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <h3>Location</h3>
-              <p>Vancouver, BC, Canada</p>
+        <div class="blog-grid">
+          <article class="blog-item featured" data-aos="fade-up">
+            <div class="video-container">
+              <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/p7rH0-1wgQY"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+              </iframe>
             </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="info-card">
-              <div class="icon-box">
-                <i class="bi bi-telephone"></i>
-              </div>
-              <h3>Contact Number</h3>
-              <p><strong>Phone:</strong> +1 (365) 998-3140<br>
-                <strong>Email:</strong> vishnu592k@gmail.com</p>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="info-card">
-              <div class="icon-box">
-                <i class="bi bi-link"></i>
-              </div>
-              <h3>Socials</h3>
-              <a href="https://github.com/VishnuGameDesign" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-github fs-2"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/vishnu-suresh-5ab471267/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-linkedin fs-2"></i>
-              </a>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
-    </section><!-- /Contact Section -->
+    </section><!-- /Blog Hero Section -->
+      </div>
+    </div>
   </main>
 
   <footer id="footer" class="footer">
+    <div class="container-fluid footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="portfolio.html" class="logo d-block">
+            <span class="sitename">Vishnu Suresh</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Vancouver, BC, V5N 1V7</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 365 998 3140</span></p>
+            <p><strong>Email:</strong> <span>vishnu592k@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://github.com/VishnuGameDesign" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishnu-suresh-5ab471267/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Vishnu Suresh</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
@@ -137,6 +153,7 @@
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
+
   </footer>
 
   <!-- Scroll Top -->

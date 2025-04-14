@@ -51,8 +51,12 @@
         </a>
         <div class="d-flex align-items-center">
           <div class="social-links">
-            <a href="#" class="facebook"><i class="bi bi-github"></i></a>
-            <a href="#" class="twitter"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/VishnuGameDesign" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishnu-suresh-5ab471267/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-linkedin"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -74,13 +78,25 @@
 
   </header>
 
-  <main class="main">
+  <main class="main max-w-screen-xl mx-auto px-10">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="title-wrapper">
-      <h1>Train Wreck</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      <h1 class="text-4xl font-bold mb-4">Train Wreck</h1>
+      <p>
+        Train Wreck is a 3D top-down isometric, local co-op, base defense game, where players take the role of train operators delivering cargo across multiple stations while fending off relentless train robbers set in the desert environment of a steamwest world. Players have to maintain fuel levels, defend their train from bandits and repair the damages. Each delivery route is filled with danger, and players achieve victory by successfully delivering cargos to all stations.
+      </p>
+      <p><br>
+        Check out the project here:
+        <a href="https://vfs-gdpg.itch.io/trainwreck" target="_blank" class="text-blue-600 underline hover:text-blue-800">
+          <i>Train Wreck on itch.io</i>
+        </a>
+      </p>
     </div>
+
     
     <!-- Blog Hero Section -->
+    <div class="blog-grid">
+    
     <section id="blog-hero" class="blog-hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="blog-grid">
@@ -101,24 +117,20 @@
     </section><!-- /Blog Hero Section -->
     
     <!-- System Showcase -->
-    <section class="bg-white text-black px-8 py-12 font-sans">
       <div>
         <h3 class="text-3xl font-semibold mb-4">System Showcase</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
 
-          <!-- First video (YouTube Embed) -->
           <div class="relative group">
             <h4 class="text-2xl font-semibold mb-4">Object-Oriented State Machine</h4>
             <iframe id="video1" class="rounded-lg object-cover w-full h-64" src="https://www.youtube.com/embed/lzhaSxdf-FQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
 
-          <!-- Second video (YouTube Embed) -->
           <div class="relative group">
             <h4 class="text-2xl font-semibold mb-4">Vertex Displacement</h4>
             <iframe id="video2" class="rounded-lg object-cover w-full h-64" src="https://www.youtube.com/embed/zuj7Bhc2An4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
 
-          <!-- Third video (YouTube Embed) -->
           <div class="relative group">
             <h4 class="text-2xl font-semibold mb-4">Visual Effects</h4>
             <iframe id="video3" class="rounded-lg object-cover w-full h-64" src="https://www.youtube.com/embed/UBfEB0bnM_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -128,36 +140,125 @@
       </div>
 
         <!-- Scriptable Object Architecture -->
-        <div>
-          <h3 class="text-3xl font-semibold mb-4">Scriptable Object Architecture</h3>
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Text Content -->
-            <div class="space-y-4 text-base leading-relaxed">
-              <p>Our game is built on a Scriptable Object-based architecture to support a highly modular, scalable, and designer-friendly development process...</p>
-              <ul class="list-disc list-inside pl-2">
-                <li>Enemy configuration via dependency injection</li>
-                <li>Adjusting enemy difficulty dynamically</li>
-                <li>Reusable logic for different enemy configurations</li>
-              </ul>
-              <p>Game resource systems like wood, metal, and interactable items such as the machine gun were implemented through Scriptable Objects...</p>
-            </div>
+      <div>
+        <h3 class="text-3xl font-semibold mb-4">Scriptable Object Architecture</h3>
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <!-- Text Content -->
+          <div class="prose prose-lg max-w-none text-base leading-relaxed space-y-4">
+            <p>Our game is built on a Scriptable Object-based architecture to support a highly modular, scalable, and designer-friendly development process. This approach enabled us to manage diverse gameplay systems such as player behaviors, enemy data, and resource management using clean, data-driven design patterns.</p>
 
-            <!-- Inspector Screenshot / Code Snippet -->
-            <div>
-              <h3 class="text-2xl font-semibold mb-4">Scriptable Object Data Implementation Example for Player's Movement</h3>
-              <div class="flex flex-col space-y-4">
-                <img src="assets/images/player_img1.jpg" class="rounded-lg shadow-lg w-full" alt="Scriptable Object Screenshot">
-                <img src="assets/images/player_img2.png" class="rounded-lg shadow-lg w-full object-contain max-h-[400px]" alt="Scriptable Object Screenshot">
-              </div>
+            <p><strong>Enemy Configuration via Dependency Injection:</strong></p>
+            <p>Enemy behaviors and attributes (e.g., health, speed, target preferences) were defined using Scriptable Object arrays. The Game Manager utilized a lightweight dependency injection system to determine which enemy data set to load per level, allowing us to:</p>
+            <ul class="list-disc list-inside pl-4">
+              <li>Dynamically adjust enemy difficulty and behavior based on level progression.</li>
+              <li>Reuse and combine enemy configurations without duplicating prefabs or scenes.</li>
+              <li>Scale combat effectively while maintaining clean separation between logic and data.</li>
+            </ul>
+
+            <p><strong>Resource and Equipment Systems:</strong></p>
+            <p>Game resources such as wood, metal, coal, and ammo as well as interactable systems like the machine gun were implemented through Scriptable Objects.</p>
+            <p>Each resource type included custom logic for tracking usage, regeneration, and interaction effects. For example:</p>
+            <ul class="list-disc list-inside pl-4">
+              <li>Coal determined whether the train could move and indirectly controlled enemy spawn logic.</li>
+              <li>Ammo values were managed through the Game Manager and tied into player interactions with mounted machine guns.</li>
+              <li>Interactable objects like extinguishers and repair tools were linked to Scriptable Object data, streamlining how their effects functioned across different levels and player states.</li>
+            </ul>
+
+            <p>By combining Scriptable Objects with runtime logic, event-driven systems, and dependency injection, we created a highly flexible and reusable architecture that allowed for fast iteration and clean collaboration between programmers and designers.</p>
+          </div>
+          <!-- Image Content on Right -->
+          <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+            <!-- First Image with Title -->
+            <div class="space-y-2">
+              <p class="text-[11px] md:text-[13px] font-light text-left">
+                <i>Scriptable Object Data implementation example for the Player's Movement</i>
+              </p>
+              <img src="assets/images/player_img1.jpg"
+                   class="rounded-lg shadow-lg object-contain w-2/2 md:w-2/2 max-h-[300px]"
+                   alt="SO Data Implementation">
+              <p class="text-[11px] md:text-[13px] font-light text-left">
+                <i>Player Data in Inspector</i>
+              </p>
+              <img src="assets/images/player_img2.png"
+                   class="rounded-lg shadow-lg object-contain w-2/2 md:w-1/2 max-h-[300px]"
+                   alt="Player Data in Inspector">
             </div>
+            <div class="space-y-2">
+              <p class="text-[11px] md:text-[13px] font-light text-left">
+                <i>Single Data configured to support different values for different levels</i>
+              </p>
+              <img src="assets/images/enemy_img1.jpg"
+                   class="rounded-lg shadow-lg object-contain w-2/2 md:w-2/2 max-h-[300px]"
+                   alt="Enemy Event Invoked">
+              <img src="assets/images/enemy_img2.png"
+                   class="rounded-lg shadow-lg object-contain w-2/2 md:w-1/2 max-h-[300px]"
+                   alt="Enemy Data in Inspector">
+            </div>
+          </div>
+          </div>
         </div>
       </div>
-    </section>
+      <!-- Object-Oriented State Machine -->
+      <div><br>
+        <h3 class="text-3xl font-semibold mb-4">Object-Oriented State Machine</h3>
+          <!-- Text Content -->
+          <div class="prose prose-lg max-w-none text-base leading-relaxed space-y-4">
+            <p>To support multiple players with varying states that affect movement and interactions, I designed and implemented a custom object-oriented state machine architecture, drawing inspiration from Hierarchical State Machines and the Factory pattern.</p>
 
+            <ul class="list-disc list-inside pl-4">
+              <li>
+                A dedicated MonoBehaviour class handles all player inputs and delegates behavior.
+              </li>
+              <li>
+                All player-related configurations such as movement speed, interaction range, and state machine parameters were stored in Scriptable Objects.
+              </li>
+              <li>
+                A mediator "State Factory" class manages state transitions by bridging the MonoBehaviour and individual state classes.
+              </li>
+            </ul>
+            <p>This modular structure allowed for clean separation of concerns, simplified debugging, and easy extensibility for adding new player states or features.</p>
+          </div>
+        </div>
+      <!-- Vertex Displacement -->
+      <div><br>
+        <h3 class="text-3xl font-semibold mb-4">Vertex Displacement</h3>
+        <!-- Text Content -->
+        <div class="prose prose-lg max-w-none text-base leading-relaxed space-y-4">
+          <p>Vertex displacement shader that creates a cartoony bulge effect - mimicking steam pressure building inside the pipe. This effect combines mesh vertex manipulation in Shader Graph with dynamic position data controlled through code.</p>
+          <p>A unique challenge was handling our modular 3D models, as the effect needed to work seamlessly across multiple pieces. To solve this, I convert the position from world space to object space and use a spline inside the pipes to track the bulge location. The effect remains consistent even with different pipe segments by passing the bulge's position through code.</p>
+          <p> In game, the effect depicts the flow of steam through the pipes. If the pipes are destroyed, the effect doesn't show and is played again until the pipe is fixed.</p>
+        </div>
+      </div>
+      <!-- Visual Effects -->
+      <div><br>
+        <h3 class="text-3xl font-semibold mb-4">Visual Effects</h3>
+        <!-- Text Content -->
+        <div class="prose prose-lg max-w-none text-base leading-relaxed space-y-4">
+          <ul class="list-disc list-inside pl-4">
+            <li>
+              Designed a firebox explosion with a trailing fire path to emphasize hazard origins.
+            </li>
+            <li>
+              Developed fire spawn visuals with a radius indicator ring - reused for bomb danger zones for consistency.
+            </li>
+            <li>
+              Built steam burst effects for broken pipes, and dynamic repair VFX (sparks and hit effect while fixing, sparkles when complete).
+            </li>
+            <li>
+              Implemented a responsive muzzle flash with multiple layers of fire, smoke and sparks for the mounted machine gun.
+            </li>
+            <li>
+              Added throw trail effects for tossed items to improve visual tracking in fast-paced gameplay.
+            </li>
+          </ul>
+          <p> All VFX were optimized for performance, reusable across systems, and aligned with the game's stylized art direction.</p>
+        </div>
+        <br>
+      </div>
+      </div>
   </main>
 
   <footer id="footer" class="footer">
-
     <div class="container-fluid footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
@@ -166,12 +267,16 @@
           </a>
           <div class="footer-contact pt-3">
             <p>Vancouver, BC, V5N 1V7</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 365 998 3140</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 (365) 998-3140</span></p>
             <p><strong>Email:</strong> <span>vishnu592k@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-github"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/VishnuGameDesign" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishnu-suresh-5ab471267/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-linkedin"></i>
+            </a>
           </div>
         </div>
       </div>
