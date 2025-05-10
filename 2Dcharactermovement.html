@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - Vishnu Suresh</title>
+  <title>Projects - 2D Character Movement</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,21 +27,29 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Tailwind CSS (for grid and responsive layout) -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+  <!-- =======================================================
+  * Template Name: Blogy
+  * Template URL: https://bootstrapmade.com/blogy-bootstrap-blog-template/
+  * Updated: Feb 22 2025 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body class="about-page">
-
+<body class="index-page">
 <header id="header" class="header position-relative">
   <div class="container-fluid container-xl position-relative">
+
     <div class="top-row d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-end">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
         <div>
           <h1 class="sitename" style="font-family: 'Arial', sans-serif;"><strong>VISHNU SURESH</strong></h1>
-          <h5 style="font-family: 'Arial', sans-serif;">Programmer / Technical Designer</h5>
+          <h5>Programmer / Technical Designer</h5>
         </div>
       </a>
       <div class="d-flex align-items-center">
@@ -55,76 +63,92 @@
         </div>
       </div>
     </div>
+
   </div>
+
   <div class="nav-wrap">
     <div class="container d-flex justify-content-center position-relative">
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Games</a></li>
-          <li><a href="githubprojects.html">Projects</a></li>
-          <li><a href="about.html" class="active">About Me</a></li>
+          <li><a href="githubprojects.html">Projects - Home</a></li>
+          <li><a href="trainwreck.html" class="active">Projects - 2D Character Movement</a></li>
+          <li><a href="calamitychasm.html">Calamity Chasm</a></li>
+          <li><a href="cosmiccruiserrepair.html">Cosmic Cruiser Repair</a></li>
+          <li><a href="runbubblesrun.html">Run Bubbles Run!</a></li>
+          <li><a href="about.html">About Me</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </div>
+
 </header>
 
-<main class="main">
+<main class="main max-w-screen-xl mx-auto px-10">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="title-wrapper">
+      <h1 class="decorative-line text-4xl font-bold mb-4">2D Character Movement System for Unity</h1>
+      <p>
+        A modular and extensible 2D character movement framework for Unity, designed to streamline the setup of basic movement mechanics. This system emphasizes clean architecture, separation of concerns, and scalability.
+      </p>
+      <p><br>
+        Check out the project here:
+        <a href="https://github.com/VishnuGameDesign/CharacterMovement2D" target="_blank" class="text-blue-600 underline hover:text-blue-800">
+          <i>CharacterMovement2D</i>
+        </a>
+      </p>
+    </div>
 
-  <!-- Page Title -->
-  <div class="page-title">
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="title-wrapper">
-        <h1 class="text-4xl font-bold">About Me</h1>
+
+    <!-- Blog Hero Section -->
+    <div class="blog-grid">
+
+      <section id="blog-hero" class="blog-hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-grid">
+            <article class="blog-item featured" data-aos="fade-up">
+              <a href="assets/images/CharacterMovement2D_Architecture.png" target="_blank" rel="noopener noreferrer">
+                <img
+                        src="assets/images/CharacterMovement2D_Architecture.png"
+                        alt="Architecture Diagram"
+                        class="transition-transform duration-300 ease-in-out hover:scale-105 cursor-zoom-in rounded-lg shadow-md"
+                />
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Scriptable Object Architecture -->
+      <div>
+        <h3 class="decorative-line text-3xl font-semibold mb-4">Features</h3>
+        <!-- Text Content -->
+        <div class="prose prose-lg max-w-none text-base leading-relaxed space-y-4">
+          <ul class="list-disc pl-5 space-y-2">
+            <li><b>Modular Architecture: </b>Decoupled components for input handling, movement logic, and data configuration.</li>
+            <li><b>Event-Driven Input: </b>Utilizes interfaces and delegates to manage player input, allowing for flexible input sources.</li>
+            <li><b>Data-Driven Configuration: </b>Employs ScriptableObjects for easy tuning of movement parameters.</li>
+            <li><b>Ground Detection: </b>Implements ray casting for accurate ground checks.</li>
+            <li><b>Clean Codebase: </b>Follows best practices for readability and maintainability.</li>
+          </ul>
+          <br>
+        </div>
       </div>
     </div>
-  </div><!-- End Page Title -->
-
-  <!-- About Section -->
-  <section id="about" class="about section">
-    <div class="container">
-      <!-- Two Column Layout with Tailwind Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-
-        <!-- Left: Profile Image -->
-        <div class="flex justify-center">
-          <!-- Adjust the size using responsive Tailwind classes -->
-          <img src="assets/images/VFS_GD_75_02_resized.jpg"
-               alt="Vishnu Suresh - Photo"
-               class="rounded-xl shadow-lg object-cover w-full max-w-sm h-auto" />
-        </div>
-
-        <!-- Right: Text Content -->
-        <div>
-          <h2 class="text-4xl font-bold mb-2">Vishnu Suresh</h2>
-          <h3 class="text-xl text-gray-600 mb-4">Programmer / Technical Designer</h3>
-          <p class="text-base leading-relaxed text-gray-700">
-            Hi! I’m Vishnu Suresh, a Programmer and Technical Designer based in Vancouver, BC, Canada.
-          </p><br>
-            I specialize in gameplay mechanics, systems development, and solving technical challenges to create immersive, interactive experiences that are both fun and performant.
-          <p><br>
-            Outside of games, I stay active by running, swimming, and hiking, and I bring that same energy and curiosity to everything I do. I'm always eager to learn something new, no matter the subject. Every challenge is an opportunity, and games are where I have the most fun pushing myself creatively and technically.
-          </p>
-          <p><br>
-            During my time at Vancouver Film School, I worked on two major projects - Train Wreck and Calamity Chasm - along with a few game jam titles.
-            Feel free to check them out on
-            <a href="https://vishnu-suresh.itch.io" target="_blank" class="text-blue-600 underline hover:text-blue-800">
-              itch.io
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section><!-- /About Section -->
-
+  </div>
 </main>
 
 <footer id="footer" class="footer">
   <div class="container-fluid footer-top">
     <div class="row gy-4">
       <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="logo d-block">
+          <div>
+            <h1 class="sitename" style="font-family: 'Arial', sans-serif;"><strong>VISHNU SURESH</strong></h1>
+            <h5 style="font-family: 'Arial', sans-serif;">Programmer / Technical Designer</h5>
+          </div>
+        </a>
         <div class="footer-contact pt-3">
           <p>Vancouver, BC, V5N 1V7</p>
           <p><strong>Email:</strong> <span>vishnu592k@gmail.com</span></p>
@@ -140,18 +164,22 @@
       </div>
     </div>
   </div>
+
   <div class="container copyright text-center mt-4">
-<!--    <p>© <span>Copyright</span> <strong class="px-1 sitename">Vishnu Suresh</strong> <span>All Rights Reserved</span></p>-->
+    <!--      <p>© <span>Copyright</span> <strong class="px-1 sitename">Vishnu Suresh</strong> <span>All Rights Reserved</span></p>-->
     <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
   </div>
+
 </footer>
 
 <!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-  <i class="bi bi-arrow-up-short"></i>
-</a>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Preloader -->
 <div id="preloader"></div>

@@ -603,6 +603,15 @@ h6 {
     display: block;
   }
 }
+/*--------------------------------------------------------------
+# GitHub Profile Section
+--------------------------------------------------------------*/
+.custom-small-img {
+  max-width: 100%;
+  width: 250px; /* Adjust as needed */
+  height: auto;
+  border-radius: 8px; /* Optional for rounded corners */
+}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -3009,7 +3018,6 @@ section,
 
 .about .about-title {
   font-size: 2.2rem;
-  margin-bottom: 1.5rem;
   line-height: 1.2;
   font-weight: 700;
 }
