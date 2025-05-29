@@ -999,180 +999,197 @@ section,
 # Blog Hero Section
 --------------------------------------------------------------*/
 .blog-hero {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
-.blog-hero .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
+    .blog-hero .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 
 @media (max-width: 768px) {
-    .blog-grid {
+    .blog-hero .blog-grid {
         grid-template-columns: 1fr;
     }
 }
 
 .blog-hero .blog-item {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 90%);
-  transition: transform 0.3s ease-in-out;
-  background-color: var(--surface-color);
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--surface-color);
 }
 
-.blog-hero .blog-item:hover {
-  transform: translateY(-5px);
-}
+    .blog-hero .blog-item:hover {
+        transform: translateY(-5px);
+    }
 
-.blog-hero .blog-item:hover img {
-  transform: scale(1.05);
-}
+        .blog-hero .blog-item:hover img,
+        .blog-hero .blog-item:hover video {
+            transform: scale(1.05);
+        }
 
-.blog-hero .blog-item:hover .blog-content {
-  background: linear-gradient(0deg, color-mix(in srgb, var(--default-color), transparent 10%) 0%, transparent 100%);
-}
+        .blog-hero .blog-item:hover .blog-content {
+            background: linear-gradient(0deg, color-mix(in srgb, var(--default-color), transparent 10%) 0%, transparent 100%);
+        }
 
-.blog-hero .blog-item.featured {
-  grid-column: span 8;
-}
+    /* Featured blog item column spans on large screens only */
+    .blog-hero .blog-item.featured {
+        grid-column: span 8;
+    }
 
 @media (max-width: 991px) {
-  .blog-hero .blog-item.featured {
-    grid-column: span 6;
-  }
+    .blog-hero .blog-item.featured {
+        grid-column: span 6;
+    }
 }
 
+/* Removed column spans for mobile (let layout flow naturally) */
+/*
 @media (max-width: 768px) {
   .blog-hero .blog-item.featured {
     grid-column: span 1;
   }
+
+  .blog-hero .blog-item:not(.featured) {
+    grid-column: span 1;
+  }
 }
+*/
 
 .blog-hero .blog-item.featured .post-title {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 @media (max-width: 768px) {
-  .blog-hero .blog-item.featured .post-title {
-    font-size: 1.5rem;
-  }
+    .blog-hero .blog-item.featured .post-title {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 991px) {
-  .blog-hero .blog-item:not(.featured) {
-    grid-column: span 3;
-  }
+    .blog-hero .blog-item:not(.featured) {
+        grid-column: span 3;
+    }
 }
 
+/* Removed column spans on mobile for non-featured items */
+/*
 @media (max-width: 768px) {
   .blog-hero .blog-item:not(.featured) {
     grid-column: span 1;
   }
 }
+*/
 
 .blog-item .post-title a {
-  font-size: 1.5rem; /* or whatever size Train Wreck uses */
-  font-weight: bold;
-  text-decoration: none;
-  color: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
 }
 
-.blog-hero .blog-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-  aspect-ratio: 16/9;
+/* Make images and videos consistent */
+.blog-hero .blog-item img,
+.blog-hero .blog-item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    transition: transform 0.3s ease-in-out;
 }
+
+/* Responsive video iframe */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+/* Optional wrapper for <video> elements */
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+    .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 .blog-hero .blog-item .blog-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem;
-  background: linear-gradient(0deg, color-mix(in srgb, var(--default-color), transparent 20%) 0%, transparent 100%);
-  transition: background 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(0deg, color-mix(in srgb, var(--default-color), transparent 20%) 0%, transparent 100%);
+    transition: background 0.3s ease-in-out;
 }
 
 .blog-hero .blog-item .post-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--contrast-color);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--contrast-color);
 }
 
-.blog-hero .blog-item .post-meta .date,
-.blog-hero .blog-item .post-meta .category {
-  display: flex;
-  align-items: center;
-}
+    .blog-hero .blog-item .post-meta .date,
+    .blog-hero .blog-item .post-meta .category {
+        display: flex;
+        align-items: center;
+    }
 
-.blog-hero .blog-item .post-meta .date::before,
-.blog-hero .blog-item .post-meta .category::before {
-  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-right: 0.5rem;
-  font-size: 1rem;
-}
+        .blog-hero .blog-item .post-meta .date::before,
+        .blog-hero .blog-item .post-meta .category::before {
+            font-family: "Helvetica", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
 
-.blog-hero .blog-item .post-meta .date::before {
-  content: "\f282";
-}
+        .blog-hero .blog-item .post-meta .date::before {
+            content: "\f282"; /* Assuming a custom font or icon */
+        }
 
-.blog-hero .blog-item .post-meta .category::before {
-  content: "\f5d3";
-}
+        .blog-hero .blog-item .post-meta .category::before {
+            content: "\f5d3"; /* Assuming a custom font or icon */
+        }
 
 .blog-hero .blog-item .post-title {
-  margin: 0;
-  font-family: "Helvetica", "HelveticaNeue-Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-family: "Helvetica", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.blog-hero .blog-item .post-title a {
-  color: var(--contrast-color);
-  text-decoration: none;
-}
+    .blog-hero .blog-item .post-title a {
+        color: var(--contrast-color);
+        text-decoration: none;
+    }
 
-.blog-hero .blog-item .post-title a:hover {
-  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
-}
+        .blog-hero .blog-item .post-title a:hover {
+            color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+        }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-wrapper {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /*--------------------------------------------------------------
 # Featured Posts Section
