@@ -108,17 +108,14 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
+      document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+          navmenu.addEventListener('click', function (e) {
+              e.preventDefault();
+              this.parentNode.classList.toggle('active');
+              this.parentNode.querySelector('.dropdown-content').classList.toggle('dropdown-active');
+              e.stopImmediatePropagation();
+          });
+      });
   }
 
   window.addEventListener("load", initSwiper);
@@ -136,3 +133,7 @@
   });
 
 })();
+
+function toggleMenu() {
+    document.getElementById('navmenu').classList.toggle('open');
+}

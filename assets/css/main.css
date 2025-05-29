@@ -362,6 +362,26 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+/* Hide the dropdown content by default */
+.navmenu .dropdown-content {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+
+/* Show when .active is toggled */
+.navmenu .dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Add spacing and pointer cursor */
+.navmenu .dropdown > a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
   .navmenu {
@@ -984,20 +1004,14 @@ section,
 
 .blog-hero .blog-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
-@media (max-width: 991px) {
-  .blog-hero .blog-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
-  .blog-hero .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-hero .blog-item {
@@ -1045,10 +1059,6 @@ section,
   .blog-hero .blog-item.featured .post-title {
     font-size: 1.5rem;
   }
-}
-
-.blog-hero .blog-item:not(.featured) {
-  grid-column: span 4;
 }
 
 @media (max-width: 991px) {
