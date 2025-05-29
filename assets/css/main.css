@@ -3317,6 +3317,32 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.contact .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-right: 0;
+}
+
+.contact .info-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    text-align: center;
+    height: 100%;
+}
+
+    .contact .info-card i {
+        font-size: 2rem;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+    }
+
 /*--------------------------------------------------------------
 # Search Results Posts Section
 --------------------------------------------------------------*/
